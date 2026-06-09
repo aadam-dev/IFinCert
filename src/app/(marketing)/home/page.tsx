@@ -103,23 +103,24 @@ export default function LandingPage() {
     <div className="flex flex-col bg-sand-50 text-ink-900 min-h-screen">
       <PageHero
         imageSrc={illustrations.hero}
+        imageSrcForeground={illustrations.heroForeground}
         imageAlt="Geometric Islamic star pattern"
         minHeight="min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]"
       >
-        <div className="max-w-3xl reveal">
-          <Badge variant="indigo" size="md" className="mb-4 sm:mb-6">
+        <div className="max-w-3xl">
+          <Badge variant="indigo" size="md" className="mb-4 sm:mb-6 reveal reveal-delay-1">
             August 2025 cohort now open
           </Badge>
-          <h1 className="font-display hero-heading font-bold text-ink-950">
+          <h1 className="font-display hero-heading font-bold text-ink-950 reveal reveal-delay-2">
             Islamic Finance Certifications Made Accessible
           </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-800 sm:text-ink-600 leading-relaxed max-w-2xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-800 leading-relaxed max-w-2xl reveal reveal-delay-3">
             IFinCert removes the financial barriers to internationally recognised Islamic
             finance credentials through structured savings, scholarships, and ethical
             Candidate-Investor sponsorships.
           </p>
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Button variant="primary" size="lg" asChild>
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 reveal reveal-delay-4">
+            <Button variant="primary" size="lg" asChild className="btn-gold-glow">
               <Link href="/register">
                 Create your account <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -137,11 +138,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="page-section bg-sand-50 pattern-overlay">
+      <section className="page-section bg-sand-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
             <Badge variant="outline" className="mb-4">How IFinCert works</Badge>
-            <h2 className="font-display display-heading font-bold text-ink-900">
+            <h2 className="font-display display-heading font-bold text-ink-950">
               Three pillars. One mission.
             </h2>
             <p className="mt-4 text-lg text-ink-500 max-w-2xl mx-auto">
@@ -225,7 +226,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="reveal">
               <Badge variant="amber" className="mb-4">Full ecosystem</Badge>
-              <h2 className="font-display display-heading font-bold text-ink-900">
+              <h2 className="font-display display-heading font-bold text-ink-950">
                 Everything you need to get certified
               </h2>
               <p className="mt-4 text-ink-500 leading-relaxed">
@@ -266,7 +267,6 @@ export default function LandingPage() {
       </section>
 
       <section className="page-section bg-white border-t border-sand-200 relative overflow-hidden">
-        <div className="absolute inset-0 pattern-overlay pointer-events-none" aria-hidden />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
           <h2 className="font-display display-heading font-bold text-ink-900 mb-4">
             Your certification journey starts here
@@ -276,7 +276,7 @@ export default function LandingPage() {
             step toward a professional career in Islamic finance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" size="xl" asChild className="btn-gold-glow text-white">
+            <Button variant="primary" size="xl" asChild className="btn-gold-glow">
               <Link href="/register">
                 Create your free account <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

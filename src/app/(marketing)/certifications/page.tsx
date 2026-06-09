@@ -13,15 +13,16 @@ export default function CertificationsPage() {
   return (
     <div className="bg-sand-50 text-ink-900 min-h-screen">
       <PageHero
-        imageSrc={illustrations.certifications}
+        imageSrc={illustrations.hero}
+        imageSrcForeground={illustrations.heroForeground}
         imageAlt="Scholar studying Islamic finance"
       >
-        <div className="reveal">
-          <Badge variant="indigo" className="mb-4">AAOIFI · CISI · INCEIF · CIFE</Badge>
-          <h1 className="font-display hero-heading font-bold text-ink-950 mb-4">
+        <div>
+          <Badge variant="indigo" className="mb-4 reveal reveal-delay-1">AAOIFI · CISI · INCEIF · CIFE</Badge>
+          <h1 className="font-display hero-heading font-bold text-ink-950 mb-4 reveal reveal-delay-2">
             Islamic Finance Certifications
           </h1>
-          <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg max-w-2xl leading-relaxed reveal reveal-delay-3">
             Eight internationally accredited credentials, from foundational knowledge to chartered
             professional status. IFinCert makes every one of them financially reachable for Nigerians.
           </p>

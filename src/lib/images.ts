@@ -1,6 +1,7 @@
 /** Custom illustrated assets for IFinCert marketing & dashboard */
 export const illustrations = {
   hero: "/images/illustrations/hero-geometric.png",
+  heroForeground: "/images/illustrations/hero-geometric-foreground.svg",
   certifications: "/images/illustrations/certifications-study.png",
   about: "/images/illustrations/about-network.png",
   features: "/images/illustrations/features-split.png",
@@ -12,6 +13,6 @@ export const marketingImages = {
   home: illustrations.hero,
   about: illustrations.about,
   certifications: illustrations.certifications,
-  faq: illustrations.about,
+  faq: illustrations.hero,
   auth: illustrations.features,
 } as const;

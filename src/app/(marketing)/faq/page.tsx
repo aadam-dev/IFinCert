@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { PageHero } from "@/components/marketing/page-hero";
-import { marketingImages } from "@/lib/images";
+import { illustrations } from "@/lib/images";
 
 export const metadata: Metadata = { title: "FAQ" };
 
@@ -53,21 +53,24 @@ export default function FAQPage() {
   return (
     <div className="bg-sand-50 text-ink-900 min-h-screen">
       <PageHero
-        imageSrc={marketingImages.faq}
+        imageSrc={illustrations.hero}
+        imageSrcForeground={illustrations.heroForeground}
         imageAlt="Professional consultation"
         align="center"
         minHeight="min-h-[280px] sm:min-h-[340px]"
       >
-        <Badge variant="indigo" className="mb-4">Questions & Answers</Badge>
-        <h1 className="font-display hero-heading font-bold text-ink-950 mb-4 sm:mb-6">
-          Frequently asked questions
-        </h1>
-        <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          Everything you need to know about IFinCert. Can&apos;t find an answer?{" "}
-          <a href="mailto:numerouno081@gmail.com" className="link-gold transition-colors">
-            Email us directly.
-          </a>
-        </p>
+        <div>
+          <Badge variant="indigo" className="mb-4 reveal reveal-delay-1">Questions & Answers</Badge>
+          <h1 className="font-display hero-heading font-bold text-ink-950 mb-4 sm:mb-6 reveal reveal-delay-2">
+            Frequently asked questions
+          </h1>
+          <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto reveal reveal-delay-3">
+            Everything you need to know about IFinCert. Can&apos;t find an answer?{" "}
+            <a href="mailto:numerouno081@gmail.com" className="link-gold transition-colors">
+              Email us directly.
+            </a>
+          </p>
+        </div>
       </PageHero>
 
       <section className="py-16 bg-white">

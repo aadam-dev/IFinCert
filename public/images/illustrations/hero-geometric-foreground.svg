@@ -1,0 +1,10 @@
+<svg width="100%" height="100%" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.1">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M700 150L850 250L850 400L700 500L550 400L550 250L700 150Z" fill="#FBBF24"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M500 100L650 200L650 350L500 450L350 350L350 200L500 100Z" fill="#6366F1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M900 200L1050 300L1050 450L900 550L750 450L750 300L900 200Z" fill="#FBBF24"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M300 50L450 150L450 300L300 400L150 300L150 150L300 50Z" fill="#6366F1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1100 0L1250 100L1250 250L1100 350L950 250L950 100L1100 0Z" fill="#FBBF24"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 250L150 350L150 500L0 600L-150 500L-150 350L0 250Z" fill="#6366F1"/>
+</g>
+</svg>

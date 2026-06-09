@@ -13,6 +13,7 @@
   --color-ink-200: #e0e7ff;
   --color-ink-100: #eef2ff;
   --color-ink-50:  #f5f7ff;
+  --color-ink-900-rgb: 30,27,75;
 
   /* ── Gold accent (Islamic geometric art reference) ── */
   --color-amber-700: #92400e;
@@ -23,6 +24,7 @@
   --color-amber-200: #fde68a;
   --color-amber-100: #fef3c7;
   --color-amber-50:  #fffbeb;
+  --color-amber-400-rgb: 245,158,11;
 
   /* ── Slate (neutral surfaces) ── */
   --color-sand-200: #e2e5f0;
@@ -182,6 +184,28 @@ body {
   overflow: hidden;
 }
 
+.parallax-background,
+.parallax-foreground {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* Ensure images are optimized for transformation */
+  will-change: transform;
+  /* Smooth transitions for parallax */
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-background {
+  z-index: 0; /* Behind everything */
+  transform: translateZ(0);
+}
+
+.parallax-foreground {
+  z-index: 2; /* Between background and content */
+  transform: translateZ(0) scale(1.05); /* Slightly scaled for initial depth */
+}
+
 /* Mobile-first: strong wash so copy stays readable over the illustration */
 .hero-backdrop::after {
   content: "";
@@ -192,9 +216,9 @@ body {
     linear-gradient(
       180deg,
       rgba(248, 249, 252, 1) 0%,
-      rgba(248, 249, 252, 0.98) 45%,
-      rgba(238, 242, 255, 0.92) 72%,
-      rgba(238, 242, 255, 0.78) 100%
+      rgba(248, 249, 252, 0.9) 40%,
+      rgba(255, 237, 213, 0.7) 70%, /* Hint of amber/gold */
+      rgba(30, 27, 75, 0.1) 100% /* Fade to a subtle ink color */
     );
   pointer-events: none;
 }
@@ -204,9 +228,9 @@ body {
     background: linear-gradient(
       105deg,
       rgba(248, 249, 252, 0.98) 0%,
-      rgba(238, 242, 255, 0.94) 42%,
-      rgba(238, 242, 255, 0.72) 68%,
-      rgba(30, 27, 75, 0.12) 100%
+      rgba(238, 242, 255, 0.9) 42%,
+      rgba(255, 245, 230, 0.7) 68%
+      ,rgba(30, 27, 75, 0.12) 100%
     );
   }
 }
@@ -215,10 +239,10 @@ body {
   .hero-backdrop::after {
     background: linear-gradient(
       105deg,
-      rgba(248, 249, 252, 0.97) 0%,
-      rgba(238, 242, 255, 0.93) 45%,
-      rgba(238, 242, 255, 0.55) 70%,
-      rgba(30, 27, 75, 0.15) 100%
+      rgba(248, 249, 252, 0.95) 0%,
+      rgba(238, 242, 255, 0.8) 45%,
+      rgba(255, 245, 230, 0.55) 70%
+      ,rgba(30, 27, 75, 0.15) 100%
     );
   }
 }
@@ -244,10 +268,28 @@ body {
 
 /* ── Subtle Islamic geometric pattern (SVG inline) ── */
 .pattern-overlay {
-  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.04'%3E%3Cpath d='M32 4 L60 20 L60 44 L32 60 L4 44 L4 20 Z'/%3E%3Cpath d='M32 14 L50 24 L50 40 L32 50 L14 40 L14 24 Z' fill='none' stroke='%236366f1' stroke-opacity='0.04' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.04'%3E%3Cpath d='M32 4 L60 20 L60 44 L32 60 L4 44 L4 20 Z'/%3E%3Cpath d='M10 6L13 8.5V11.5L10 14L7 11.5V8.5L10 6Z' fill='none' stroke='%236366f1' stroke-opacity='0.04' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+@media (max-width: 639px) {
+  .pattern-overlay {
+    opacity: 0 !important; /* Hide pattern-overlay on mobile */
+  }
 }
 
 /* ── Animations ── */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0);    }
@@ -276,25 +318,29 @@ body {
 
 /* ── Scroll-reveal utility ── */
 .reveal {
-  animation: slideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: slideUpFade 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.reveal-delay-1 { animation-delay: 0.1s; }
-.reveal-delay-2 { animation-delay: 0.2s; }
-.reveal-delay-3 { animation-delay: 0.3s; }
+.reveal-delay-1 { animation-delay: 0.15s; }
+.reveal-delay-2 { animation-delay: 0.3s; }
+.reveal-delay-3 { animation-delay: 0.45s; }
 
 /* ── Gold animated border on CTAs ── */
 .btn-gold-glow {
-  background: linear-gradient(135deg, #1e1b4b 0%, #2e2a6e 50%, #1e1b4b 100%);
+  background: linear-gradient(135deg, var(--color-ink-900) 0%, var(--color-ink-800) 50%, var(--color-ink-900) 100%);
   background-size: 200% 200%;
-  border: 1px solid rgba(245, 158, 11, 0.5);
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.btn-gold-glow:hover {
-  border-color: #f59e0b;
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 4px 16px rgba(30, 27, 75, 0.3);
-  animation: gradientShift 2s ease infinite;
+  border: 1px solid var(--color-amber-400);
+  color: white;
+  transition: all 0.3s ease;
 }
 
+@media (hover: hover) {
+  .btn-gold-glow:hover {
+    background-position: 100% 0;
+    box-shadow: 0 0 20px rgba(var(--color-amber-400-rgb), 0.5), 0 4px 16px rgba(var(--color-ink-900-rgb), 0.3);
+    transform: translateY(-2px);
+    animation: gradientShift 2s ease infinite; /* Continuous glow */
+  }
+}
 /* ── Indigo glow on icon badges ── */
 .icon-badge-indigo {
   background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(99,102,241,0.06));

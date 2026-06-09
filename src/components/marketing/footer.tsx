@@ -131,17 +131,6 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
-            {footerLinks.legal.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-ink-400 hover:text-amber-400 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

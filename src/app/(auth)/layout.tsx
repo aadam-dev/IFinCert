@@ -36,10 +36,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
       <footer className="relative z-10 py-6 px-6 text-center border-t border-sand-200 bg-white/60 space-y-1.5">
         <p className="text-xs text-ink-500">
-          © {new Date().getFullYear()} IFinCert.{" "}
-          <Link href="/legal/privacy" className="hover:text-ink-900 underline underline-offset-2 transition-colors">Privacy</Link>
-          {" · "}
-          <Link href="/legal/terms" className="hover:text-ink-900 underline underline-offset-2 transition-colors">Terms</Link>
+          © {new Date().getFullYear()} IFinCert.
         </p>
         <p className="text-xs text-ink-400">
           powered by{" "}
