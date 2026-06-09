@@ -59,10 +59,10 @@ export default function FAQPage() {
         minHeight="min-h-[280px] sm:min-h-[340px]"
       >
         <Badge variant="indigo" className="mb-4">Questions & Answers</Badge>
-        <h1 className="font-display hero-heading font-bold text-ink-900 mb-4 sm:mb-6">
+        <h1 className="font-display hero-heading font-bold text-ink-950 mb-4 sm:mb-6">
           Frequently asked questions
         </h1>
-        <p className="text-ink-500 text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
           Everything you need to know about IFinCert. Can&apos;t find an answer?{" "}
           <a href="mailto:numerouno081@gmail.com" className="link-gold transition-colors">
             Email us directly.

@@ -107,13 +107,13 @@ export default function LandingPage() {
         minHeight="min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]"
       >
         <div className="max-w-3xl reveal">
-          <Badge variant="indigo" size="md" className="mb-6">
+          <Badge variant="indigo" size="md" className="mb-4 sm:mb-6">
             August 2025 cohort now open
           </Badge>
-          <h1 className="font-display hero-heading font-bold text-ink-900">
+          <h1 className="font-display hero-heading font-bold text-ink-950">
             Islamic Finance Certifications Made Accessible
           </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-800 sm:text-ink-600 leading-relaxed max-w-2xl">
             IFinCert removes the financial barriers to internationally recognised Islamic
             finance credentials through structured savings, scholarships, and ethical
             Candidate-Investor sponsorships.

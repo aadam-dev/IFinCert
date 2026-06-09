@@ -18,10 +18,10 @@ export default function CertificationsPage() {
       >
         <div className="reveal">
           <Badge variant="indigo" className="mb-4">AAOIFI · CISI · INCEIF · CIFE</Badge>
-          <h1 className="font-display hero-heading font-bold text-ink-900 mb-4">
+          <h1 className="font-display hero-heading font-bold text-ink-950 mb-4">
             Islamic Finance Certifications
           </h1>
-          <p className="text-ink-500 text-lg max-w-2xl leading-relaxed">
+          <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg max-w-2xl leading-relaxed">
             Eight internationally accredited credentials, from foundational knowledge to chartered
             professional status. IFinCert makes every one of them financially reachable for Nigerians.
           </p>

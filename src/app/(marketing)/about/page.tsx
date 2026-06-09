@@ -37,10 +37,10 @@ export default function AboutPage() {
       <PageHero imageSrc={illustrations.about} imageAlt="Human capital network illustration">
         <div className="max-w-3xl reveal">
           <Badge variant="indigo" className="mb-5">Our mission</Badge>
-          <h1 className="font-display hero-heading font-bold mb-4 sm:mb-6 text-ink-900">
+          <h1 className="font-display hero-heading font-bold mb-4 sm:mb-6 text-ink-950">
             Bridging knowledge gap, making ways for human capital
           </h1>
-          <p className="text-ink-500 text-lg leading-relaxed">
+          <p className="text-ink-800 sm:text-ink-600 text-base sm:text-lg leading-relaxed">
             IFinCert was born out of a recognition that Nigeria&apos;s Islamic finance sector is growing
             rapidly, yet the professionals needed to sustain that growth cannot access the
             training they need. We are changing that.

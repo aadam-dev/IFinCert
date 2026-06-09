@@ -115,9 +115,22 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-ink-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-ink-400">
-            © {new Date().getFullYear()} IFinCert. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center md:items-start gap-1.5 text-center md:text-left">
+            <p className="text-sm text-ink-400">
+              © {new Date().getFullYear()} IFinCert. All rights reserved.
+            </p>
+            <p className="text-xs text-ink-500">
+              powered by{" "}
+              <a
+                href="https://aadamdev.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-400 hover:text-amber-400 transition-colors"
+              >
+                aadam
+              </a>
+            </p>
+          </div>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
             {footerLinks.legal.map((link) => (
               <Link
