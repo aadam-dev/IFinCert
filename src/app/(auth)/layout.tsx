@@ -28,8 +28,8 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         </Link>
       </header>
 
-      <main className="relative z-10 flex-1 flex items-center justify-center px-4 py-10">
-        <div className="w-full max-w-md surface-card p-8">
+      <main className="relative z-10 flex-1 flex items-center justify-center px-4 py-6 sm:py-10">
+        <div className="w-full max-w-md surface-card p-5 sm:p-8">
           {children}
         </div>
       </main>

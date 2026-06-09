@@ -104,21 +104,21 @@ export default function LandingPage() {
       <PageHero
         imageSrc={illustrations.hero}
         imageAlt="Geometric Islamic star pattern"
-        minHeight="min-h-[520px] lg:min-h-[600px]"
+        minHeight="min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]"
       >
         <div className="max-w-3xl reveal">
           <Badge variant="indigo" size="md" className="mb-6">
             August 2025 cohort now open
           </Badge>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-ink-900">
+          <h1 className="font-display hero-heading font-bold text-ink-900">
             Islamic Finance Certifications Made Accessible
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-ink-500 leading-relaxed max-w-2xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-ink-500 leading-relaxed max-w-2xl">
             IFinCert removes the financial barriers to internationally recognised Islamic
             finance credentials through structured savings, scholarships, and ethical
             Candidate-Investor sponsorships.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button variant="primary" size="lg" asChild>
               <Link href="/register">
                 Create your account <ArrowRight className="ml-2 h-5 w-5" />
@@ -137,11 +137,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-sand-50 pattern-overlay">
+      <section className="page-section bg-sand-50 pattern-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 reveal">
             <Badge variant="outline" className="mb-4">How IFinCert works</Badge>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-ink-900">
+            <h2 className="font-display display-heading font-bold text-ink-900">
               Three pillars. One mission.
             </h2>
             <p className="mt-4 text-lg text-ink-500 max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ export default function LandingPage() {
                 <div
                   key={pillar.title}
                   className={cn(
-                    "relative surface-card p-8 group hover:border-amber-300 reveal",
+                    "relative surface-card p-5 sm:p-8 group hover:border-amber-300 reveal",
                     delayClass
                   )}
                 >
@@ -181,12 +181,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-white border-y border-sand-200">
+      <section className="page-section bg-white border-y border-sand-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
             <div>
               <Badge variant="outline" className="mb-4">Internationally accredited</Badge>
-              <h2 className="font-display text-4xl font-bold text-ink-900">
+              <h2 className="font-display display-heading font-bold text-ink-900">
                 Your certification pathway
               </h2>
               <p className="mt-3 text-ink-500 max-w-lg">
@@ -220,12 +220,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-sand-50">
+      <section className="page-section bg-sand-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="reveal">
               <Badge variant="amber" className="mb-4">Full ecosystem</Badge>
-              <h2 className="font-display text-4xl lg:text-5xl font-bold text-ink-900">
+              <h2 className="font-display display-heading font-bold text-ink-900">
                 Everything you need to get certified
               </h2>
               <p className="mt-4 text-ink-500 leading-relaxed">
@@ -234,7 +234,7 @@ export default function LandingPage() {
                 Islamic finance professionals.
               </p>
             </div>
-            <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden border border-sand-200 shadow-sm reveal reveal-delay-2">
+            <div className="relative h-48 sm:h-64 lg:h-80 rounded-2xl overflow-hidden border border-sand-200 shadow-sm reveal reveal-delay-2">
               <Image
                 src={illustrations.features}
                 alt="Savings and certification illustration"
@@ -265,10 +265,10 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-t border-sand-200 relative overflow-hidden">
+      <section className="page-section bg-white border-t border-sand-200 relative overflow-hidden">
         <div className="absolute inset-0 pattern-overlay pointer-events-none" aria-hidden />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
-          <h2 className="font-display text-4xl lg:text-5xl font-bold text-ink-900 mb-4">
+          <h2 className="font-display display-heading font-bold text-ink-900 mb-4">
             Your certification journey starts here
           </h2>
           <p className="text-ink-500 text-lg mb-10 max-w-xl mx-auto">

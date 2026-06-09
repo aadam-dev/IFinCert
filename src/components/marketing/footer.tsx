@@ -58,7 +58,7 @@ export function Footer() {
                 className="flex items-center gap-2.5 text-sm text-ink-300 hover:text-amber-400 transition-colors group"
               >
                 <Mail className="h-4 w-4 text-ink-400 group-hover:text-amber-400 transition-colors" />
-                numerouno081@gmail.com
+                <span className="break-all">numerouno081@gmail.com</span>
               </a>
               <a
                 href="tel:+2348126844811"
@@ -114,11 +114,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-ink-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-ink-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-ink-400">
             © {new Date().getFullYear()} IFinCert. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
             {footerLinks.legal.map((link) => (
               <Link
                 key={link.href}

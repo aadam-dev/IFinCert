@@ -42,7 +42,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
           {rightIcon && (
-            <span className="absolute right-3 text-ink-400">{rightIcon}</span>
+            <span className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center touch-target text-ink-400">
+              {rightIcon}
+            </span>
           )}
         </div>
         {error && (

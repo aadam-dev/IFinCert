@@ -29,14 +29,14 @@ export function CertLevelFilter({ certifications }: { certifications: Certificat
 
   return (
     <div>
-      <div className="flex flex-wrap gap-1 mb-10 border-b border-sand-200 pb-0">
+      <div className="tab-scroll mb-8 border-b border-sand-200 pb-0">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             type="button"
             onClick={() => setActive(tab.id)}
             className={cn(
-              "relative px-4 py-2.5 text-sm font-medium transition-colors rounded-t-lg",
+              "relative shrink-0 px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-medium transition-colors rounded-t-lg min-h-[44px]",
               active === tab.id
                 ? "text-ink-600"
                 : "text-ink-500 hover:text-ink-800"
@@ -53,7 +53,7 @@ export function CertLevelFilter({ certifications }: { certifications: Certificat
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
         {filtered.map((cert) => (
           <CertTiltCard key={cert.code} cert={cert} />
         ))}

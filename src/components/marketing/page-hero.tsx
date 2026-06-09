@@ -16,7 +16,7 @@ export function PageHero({
   children,
   className,
   align = "left",
-  minHeight = "min-h-[420px]",
+  minHeight = "min-h-[300px] sm:min-h-[380px] lg:min-h-[440px]",
 }: PageHeroProps) {
   return (
     <section
@@ -37,7 +37,7 @@ export function PageHero({
       <div className="absolute inset-0 pattern-overlay pointer-events-none" aria-hidden />
       <div
         className={cn(
-          "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32",
+          "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28",
           align === "center" && "text-center"
         )}
       >

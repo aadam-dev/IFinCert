@@ -37,7 +37,7 @@ export default function AboutPage() {
       <PageHero imageSrc={illustrations.about} imageAlt="Human capital network illustration">
         <div className="max-w-3xl reveal">
           <Badge variant="indigo" className="mb-5">Our mission</Badge>
-          <h1 className="font-display text-5xl lg:text-6xl font-bold leading-tight mb-6 text-ink-900">
+          <h1 className="font-display hero-heading font-bold mb-4 sm:mb-6 text-ink-900">
             Bridging knowledge gap, making ways for human capital
           </h1>
           <p className="text-ink-500 text-lg leading-relaxed">
@@ -48,11 +48,11 @@ export default function AboutPage() {
         </div>
       </PageHero>
 
-      <section className="py-20 bg-white border-b border-sand-200">
+      <section className="page-section bg-white border-b border-sand-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="reveal">
             <Badge variant="rose" className="mb-4">The problem</Badge>
-            <h2 className="font-display text-3xl font-bold mb-5 text-ink-900">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-5 text-ink-900">
               A ₦4.5 trillion industry with a workforce gap
             </h2>
             <div className="space-y-4 text-ink-500 leading-relaxed">
@@ -73,9 +73,9 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="surface-card p-8 reveal reveal-delay-2">
+          <div className="surface-card p-5 sm:p-8 reveal reveal-delay-2">
             <Badge variant="indigo" className="mb-4">Our solution</Badge>
-            <h2 className="font-display text-3xl font-bold mb-5 text-ink-900">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-5 text-ink-900">
               A complete ecosystem
             </h2>
             <ul className="space-y-4">
@@ -96,10 +96,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-sand-50 pattern-overlay">
+      <section className="page-section bg-sand-50 pattern-overlay">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 reveal">
-            <h2 className="font-display text-4xl font-bold mb-3 text-ink-900">The team</h2>
+            <h2 className="font-display display-heading font-bold mb-3 text-ink-900">The team</h2>
             <p className="text-ink-500">The researchers and practitioners behind IFinCert.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -124,13 +124,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-white border-t border-sand-200 relative overflow-hidden">
+      <section id="contact" className="page-section bg-white border-t border-sand-200 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden>
           <Image src={illustrations.about} alt="" fill className="object-cover" sizes="100vw" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start relative z-10">
           <div className="reveal">
-            <h2 className="font-display text-4xl font-bold text-ink-900 mb-4">Get in touch</h2>
+            <h2 className="font-display display-heading font-bold text-ink-900 mb-4">Get in touch</h2>
             <p className="text-ink-500 leading-relaxed mb-8">
               Interested in partnering with IFinCert as an investor, institution, or collaborator?
               We would like to hear from you.
@@ -156,7 +156,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="surface-card p-8 reveal reveal-delay-2">
+          <div className="surface-card p-5 sm:p-8 reveal reveal-delay-2">
             <h3 className="text-xl font-semibold text-ink-900 mb-2">Join the IFinCert network</h3>
             <p className="text-ink-500 text-sm mb-6">
               Create your free account and become part of Nigeria&apos;s growing Islamic finance

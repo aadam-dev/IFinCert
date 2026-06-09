@@ -81,7 +81,7 @@ export function AnimatedStats({ stats }: { stats: StatItem[] }) {
   }, []);
 
   return (
-    <dl ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <dl ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       {stats.map((stat, i) => {
         const parsed = stat.numeric != null
           ? { prefix: stat.prefix ?? "", numeric: stat.numeric, suffix: stat.suffix ?? "" }
@@ -93,7 +93,7 @@ export function AnimatedStats({ stats }: { stats: StatItem[] }) {
             className={cn("flex flex-col reveal", `reveal-delay-${Math.min(i + 1, 3)}`)}
           >
             <dt className="text-sm text-ink-500">{stat.label}</dt>
-            <dd className="mt-1 text-3xl font-bold font-display stat-gold">
+            <dd className="mt-1 text-2xl sm:text-3xl font-bold font-display stat-gold break-words">
               {parsed.numeric != null ? (
                 <AnimatedNumber
                   target={parsed.numeric}

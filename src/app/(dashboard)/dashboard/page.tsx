@@ -34,9 +34,9 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <DashboardTopBar title="Overview" />
-      <div className="flex-1 overflow-y-auto p-6 space-y-6">
+      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
 
-        <div className="rounded-2xl px-7 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 border border-ink-700 text-white">
+        <div className="rounded-2xl px-4 sm:px-7 py-5 sm:py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 border border-ink-700 text-white">
           <div>
             <p className="text-sm text-ink-300 mb-1">Good day</p>
             <h2 className="font-display text-2xl font-bold">
@@ -57,7 +57,7 @@ export default function DashboardPage() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           <StatCard
             label="Amount Saved"
             value={formatNaira(mockSavings.amountSaved)}
@@ -89,10 +89,10 @@ export default function DashboardPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <Card>
             <CardHeader>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <CardTitle>Savings (CSAA)</CardTitle>
                 <div className="flex items-center gap-3">
-                  <SavingsRing percent={savingsPct} />
+                  <SavingsRing percent={savingsPct} size={56} />
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-ink-50 text-ink-600 border border-ink-200">
                     {savingsPct}% saved
                   </span>

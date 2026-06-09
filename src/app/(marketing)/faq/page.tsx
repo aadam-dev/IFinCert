@@ -56,10 +56,10 @@ export default function FAQPage() {
         imageSrc={marketingImages.faq}
         imageAlt="Professional consultation"
         align="center"
-        minHeight="min-h-[360px]"
+        minHeight="min-h-[280px] sm:min-h-[340px]"
       >
         <Badge variant="indigo" className="mb-4">Questions & Answers</Badge>
-        <h1 className="font-display text-5xl font-bold text-ink-900 mb-6">
+        <h1 className="font-display hero-heading font-bold text-ink-900 mb-4 sm:mb-6">
           Frequently asked questions
         </h1>
         <p className="text-ink-500 text-lg leading-relaxed max-w-2xl mx-auto">

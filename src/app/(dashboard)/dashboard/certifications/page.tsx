@@ -26,9 +26,9 @@ export default function CertificationsPage() {
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <DashboardTopBar title="Certifications" />
-      <div className="flex-1 overflow-y-auto p-6 space-y-6">
+      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
             <h2 className="text-xl font-semibold text-ink-900">Your certification pathway</h2>
             <p className="text-sm text-ink-500 mt-1">Track your progress toward each globally recognised credential.</p>

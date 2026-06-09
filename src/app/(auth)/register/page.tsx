@@ -60,7 +60,7 @@ export default function RegisterPage() {
             Choose your registration type to get started.
           </p>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <RoleCard
               icon={GraduationCap}
               title="Student"
