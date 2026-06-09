@@ -64,8 +64,8 @@ function NavItem({
       className={cn(
         "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 group",
         isActive
-          ? "bg-amber-500 text-white shadow-sm shadow-amber-500/30"
-          : "text-ink-400 hover:bg-ink-700 hover:text-white"
+          ? "bg-ink-600 text-white shadow-sm shadow-ink-600/30"
+          : "text-ink-300 hover:bg-ink-800 hover:text-amber-300"
       )}
     >
       <Icon className={cn("h-5 w-5 shrink-0", isActive ? "text-white" : "text-ink-500 group-hover:text-white")} />
@@ -86,20 +86,30 @@ export function DashboardSidebar() {
       )}
     >
       {/* Header */}
-      <div className={cn("flex items-center gap-3 px-4 py-5 border-b border-ink-700", collapsed && "justify-center px-0")}>
-        <div className="w-8 h-8 bg-ink-700 rounded-lg flex items-center justify-center shrink-0">
+      <div
+        className={cn(
+          "flex items-center gap-3 px-4 py-5 border-b border-ink-800 relative overflow-hidden",
+          collapsed && "justify-center px-0"
+        )}
+        style={{
+          backgroundImage: "url(/images/illustrations/pattern-tile.svg)",
+          backgroundSize: "120px 120px",
+        }}
+      >
+        <div className="absolute inset-0 bg-ink-900/85" aria-hidden />
+        <div className="relative w-8 h-8 bg-ink-800 border border-ink-700 rounded-lg flex items-center justify-center shrink-0">
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2L16.5 6.5V13.5L10 18L3.5 13.5V6.5L10 2Z" fill="none" stroke="#D4883A" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M10 6L13 8.5V11.5L10 14L7 11.5V8.5L10 6Z" fill="#D4883A" />
+            <path d="M10 2L16.5 6.5V13.5L10 18L3.5 13.5V6.5L10 2Z" fill="none" stroke="#818cf8" strokeWidth="1.5" strokeLinejoin="round" />
+            <path d="M10 6L13 8.5V11.5L10 14L7 11.5V8.5L10 6Z" fill="#818cf8" />
           </svg>
         </div>
         {!collapsed && (
-          <span className="font-display text-lg font-bold text-white">MIFEA</span>
+          <span className="relative font-display text-lg font-bold text-white tracking-tight">IFinCert</span>
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}
           className={cn(
-            "ml-auto p-1.5 rounded-lg text-ink-400 hover:text-white hover:bg-ink-700 transition-colors hidden lg:flex",
+            "relative ml-auto p-1.5 rounded-lg text-ink-300 hover:text-amber-300 hover:bg-ink-800 transition-colors hidden lg:flex",
             collapsed && "ml-0"
           )}
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
@@ -194,7 +204,7 @@ export function DashboardTopBar({ title }: { title: string }) {
         >
           <Bell className="h-5 w-5" />
           {unreadCount > 0 && (
-            <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-amber-500 text-white text-[10px] font-bold flex items-center justify-center">
+            <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-ink-600 text-white text-[10px] font-bold flex items-center justify-center dot-gold-pulse">
               {unreadCount}
             </span>
           )}

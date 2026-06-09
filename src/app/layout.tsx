@@ -23,11 +23,11 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MIFEA — Making Islamic Finance Education Accessible",
-    template: "%s | MIFEA",
+    default: "IFinCert — Islamic Finance Certification Accelerator",
+    template: "%s | IFinCert",
   },
   description:
-    "Bridging the knowledge gap in Islamic finance professional certification in Nigeria. Access savings plans, scholarships, training programmes, and career opportunities.",
+    "Bridging the knowledge gap in Islamic finance professional certification in Nigeria. Access structured savings, scholarships, Candidate-Investor partnerships, and career placement.",
   keywords: [
     "Islamic finance",
     "AAOIFI",
@@ -38,15 +38,16 @@ export const metadata: Metadata = {
     "certification",
     "halal finance",
     "scholarship",
+    "IFinCert",
   ],
-  authors: [{ name: "MIFEA Team" }],
-  creator: "MIFEA",
+  authors: [{ name: "IFinCert Team" }],
+  creator: "IFinCert",
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://mifea.ng",
-    siteName: "MIFEA",
-    title: "MIFEA — Making Islamic Finance Education Accessible",
+    url: "https://ifincert.ng",
+    siteName: "IFinCert",
+    title: "IFinCert — Islamic Finance Certification Accelerator",
     description:
       "Bridging the knowledge gap in Islamic finance professional certification in Nigeria.",
   },

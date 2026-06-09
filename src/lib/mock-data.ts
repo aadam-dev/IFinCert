@@ -88,7 +88,7 @@ export const certifications: Certification[] = [
     name: "Certificate of Proficiency, Sharia Standards",
     body: "AAOIFI",
     description:
-      "Foundational proficiency in AAOIFI Sharī'ah Standards — ideal for compliance officers and legal professionals.",
+      "Foundational proficiency in AAOIFI Sharī'ah Standards, ideal for compliance officers and legal professionals.",
     costUSD: 350,
     costNGN: 540_000,
     status: "eligible",
@@ -197,7 +197,7 @@ export const notifications: Notification[] = [
   {
     id: "n003",
     title: "Savings Milestone",
-    message: "You've saved ₦500,000 — you are 75% away from your CSAA goal!",
+    message: "You've saved ₦500,000. You are 75% away from your CSAA goal.",
     read: true,
     createdAt: new Date("2025-05-28"),
   },
@@ -231,7 +231,7 @@ export const notifications: Notification[] = [
   },
   {
     id: "n008",
-    title: "Welcome to MIFEA",
+    title: "Welcome to IFinCert",
     message: "Your account has been created. Start by setting your savings goal.",
     read: true,
     createdAt: new Date("2025-01-15"),

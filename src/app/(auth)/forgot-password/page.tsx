@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -22,12 +22,14 @@ export default function ForgotPasswordPage() {
     <div className="w-full max-w-sm">
       {sent ? (
         <div className="text-center">
-          <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-5">
-            <span className="text-2xl">✉️</span>
+          <div className="w-16 h-16 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mx-auto mb-5">
+            <Mail className="h-7 w-7 text-amber-600" />
           </div>
-          <h1 className="font-display text-2xl font-bold text-ink-900 mb-2">Check your email</h1>
-          <p className="text-ink-500 text-sm mb-6">
-            We&apos;ve sent a password reset link to your email address.
+          <h1 className="font-display text-2xl font-bold text-ink-950 mb-2">
+            Check your email
+          </h1>
+          <p className="text-sm text-ink-600 mb-6">
+            We&apos;ve sent a password reset link to your email address. It may take a minute to arrive.
           </p>
           <Button variant="outline" size="md" asChild className="w-full">
             <Link href="/login">Back to sign in</Link>
@@ -35,19 +37,35 @@ export default function ForgotPasswordPage() {
         </div>
       ) : (
         <>
-          <h1 className="font-display text-3xl font-bold text-ink-900 mb-2">Reset password</h1>
-          <p className="text-ink-500 mb-8 text-sm">
-            Enter your email and we&apos;ll send you a reset link.
+          <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-6">
+            <Mail className="h-6 w-6 text-amber-600" />
+          </div>
+
+          <h1 className="font-display text-3xl font-bold text-ink-950 mb-2">
+            Reset password
+          </h1>
+          <p className="text-sm text-ink-600 mb-8">
+            Enter your email and we&apos;ll send you a secure reset link.
           </p>
+
           <form onSubmit={handleSubmit} className="space-y-4">
-            <Input label="Email address" name="email" type="email" placeholder="you@gmail.com" required />
+            <Input
+              label="Email address"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
             <Button type="submit" variant="primary" size="lg" className="w-full" loading={loading}>
               Send reset link <ArrowRight className="h-5 w-5" />
             </Button>
           </form>
-          <p className="text-center text-sm text-ink-500 mt-6">
+
+          <p className="text-center text-sm text-ink-600 mt-6">
             Remember your password?{" "}
-            <Link href="/login" className="text-amber-500 font-medium hover:underline">Sign in</Link>
+            <Link href="/login" className="font-semibold text-amber-600 hover:text-amber-700 transition-colors">
+              Sign in
+            </Link>
           </p>
         </>
       )}

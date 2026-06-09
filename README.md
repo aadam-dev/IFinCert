@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IFinCert
 
-## Getting Started
+**Islamic Finance Certification Accelerator** — a FinTech/EdTech platform that helps Nigerians access internationally recognised Islamic finance credentials through structured savings, scholarships, Candidate-Investor sponsorship, and career placement.
 
-First, run the development server:
+IFinCert addresses a practical barrier: globally accredited certifications from bodies such as AAOIFI, CISI, and INCEIF often cost between ₦540,000 and ₦3,400,000, putting them out of reach for most students and early-career professionals in Nigeria. The platform breaks that cost into achievable steps while keeping every financial structure Sharia-compliant.
+
+## What IFinCert provides
+
+- **Certification pathways** — CSAA, CIPA, CPSS, IFQ, CPIF, CIFE, and ACIFE programmes, from foundation to professional level
+- **Savings & investment plans** — goal-based contributions in Naira toward certification costs
+- **Scholarships** — full and partial awards for eligible candidates
+- **Candidate-Investor (C/I) Support** — Qard Hasan–based sponsorship arrangements
+- **Job placement** — connections to roles at partner Islamic financial institutions across Nigeria
+
+## Tech stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| UI | React 19, Tailwind CSS 4, Radix UI |
+| Language | TypeScript |
+| Forms | React Hook Form, Zod |
+
+## Getting started
+
+**Requirements:** Node.js 20.9+
 
 ```bash
+git clone https://github.com/aadam-dev/IFinCert.git
+cd IFinCert
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The app redirects to `/home`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── (marketing)/     # Public pages — home, certifications, about, FAQ
+│   ├── (auth)/          # Login, register, password reset
+│   ├── (dashboard)/     # Authenticated user dashboard
+│   └── legal/           # Privacy, terms, cookies
+├── components/
+│   ├── marketing/       # Nav, footer, hero, certification UI
+│   ├── dashboard/       # Sidebar, savings ring
+│   └── ui/              # Shared design-system components
+├── lib/                 # Mock data, utilities, image paths
+└── types/               # Shared TypeScript types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Current status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This repository contains the **frontend application** with mock data for demonstration and development. Backend services, payment integrations, and production authentication are not yet connected.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+IFinCert is based in Ilorin, Kwara State, Nigeria.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Website: [ifincert.ng](https://ifincert.ng) *(when live)*
+- Repository: [github.com/aadam-dev/IFinCert](https://github.com/aadam-dev/IFinCert)
+
+## Licence
+
+All rights reserved. Source is published for transparency and collaboration; redistribution or commercial use requires permission from the IFinCert team.

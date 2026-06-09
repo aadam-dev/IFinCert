@@ -1,33 +1,33 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy Policy | MIFEA" };
+export const metadata: Metadata = { title: "Privacy Policy | IFinCert" };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mb-10">
-      <h2 className="font-display text-2xl font-bold text-ink-900 mb-4">{title}</h2>
-      <div className="text-ink-600 leading-relaxed space-y-4">{children}</div>
+      <h2 className="font-display text-2xl font-bold text-ink-950 mb-4">{title}</h2>
+      <div className="text-ink-700 leading-relaxed space-y-4">{children}</div>
     </section>
   );
 }
 
 export default function PrivacyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-12">
-        <p className="text-sm text-amber-500 font-medium mb-2">Legal</p>
-        <h1 className="font-display text-4xl font-bold text-ink-900 mb-3">Privacy Policy</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-ink-900">
+      <div className="mb-12 border-b border-sand-200 pb-6">
+        <p className="text-sm text-amber-600 font-medium mb-2">Legal</p>
+        <h1 className="font-display text-4xl font-bold text-ink-950 mb-3">Privacy Policy</h1>
         <p className="text-ink-500 text-sm">Last updated: 2 June 2026 · Effective immediately</p>
       </div>
 
       <Section title="1. Introduction">
         <p>
-          MIFEA (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting your personal information and your
+          IFinCert (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting your personal information and your
           right to privacy. This Privacy Policy explains how we collect, use, disclose, and
-          safeguard your information when you use our platform at mifea.ng and related services.
+          safeguard your information when you use our platform at ifincert.ng and related services.
         </p>
         <p>
-          By creating an account or using the MIFEA platform, you consent to the practices
+          By creating an account or using the IFinCert platform, you consent to the practices
           described in this policy. If you do not agree, please do not use our services.
         </p>
       </Section>
@@ -53,7 +53,7 @@ export default function PrivacyPage() {
       <Section title="3. How We Use Your Information">
         <p>We use your information to:</p>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li>Create and manage your MIFEA account</li>
+          <li>Create and manage your IFinCert account</li>
           <li>Process and track savings and investment contributions</li>
           <li>Evaluate scholarship and C/I Support applications</li>
           <li>Connect you with Islamic financial institutions for job placement</li>
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
         </ul>
         <p>
           To exercise any of these rights, contact us at{" "}
-          <a href="mailto:numerouno081@gmail.com" className="text-amber-500 hover:underline">
+          <a href="mailto:numerouno081@gmail.com" className="text-amber-600 hover:text-amber-700 transition-colors hover:underline">
             numerouno081@gmail.com
           </a>
           . We will respond within 30 days.
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
         <p>
           We use essential cookies to operate the platform and analytical cookies to understand usage
           patterns. See our{" "}
-          <a href="/legal/cookies" className="text-amber-500 hover:underline">Cookie Policy</a> for
+          <a href="/legal/cookies" className="text-amber-600 hover:text-amber-700 transition-colors hover:underline">Cookie Policy</a> for
           full details.
         </p>
       </Section>
@@ -147,9 +147,9 @@ export default function PrivacyPage() {
           For privacy-related enquiries, contact our Data Protection team:
         </p>
         <address className="not-italic text-sm space-y-1">
-          <p><strong>MIFEA — Data Protection</strong></p>
+          <p><strong>IFinCert — Data Protection</strong></p>
           <p>Taiwo Isale, Unity Rd, Ilorin, Kwara State, Nigeria</p>
-          <p>Email: <a href="mailto:numerouno081@gmail.com" className="text-amber-500 hover:underline">numerouno081@gmail.com</a></p>
+          <p>Email: <a href="mailto:numerouno081@gmail.com" className="text-amber-600 hover:text-amber-700 transition-colors hover:underline">numerouno081@gmail.com</a></p>
           <p>Phone: +2348126844811</p>
         </address>
       </Section>

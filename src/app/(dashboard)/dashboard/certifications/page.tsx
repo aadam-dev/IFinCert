@@ -69,8 +69,7 @@ export default function CertificationsPage() {
                     <div>
                       <p className="text-xs text-ink-400">Cost</p>
                       <p className="text-sm font-semibold text-ink-900">
-                        USD {cert.costUSD.toLocaleString()}{" "}
-                        <span className="text-ink-400 font-normal text-xs">/ {formatNaira(cert.costNGN)}</span>
+                        {formatNaira(cert.costNGN)}
                       </p>
                     </div>
                     {!isLocked && (

@@ -1,43 +1,44 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Ink (deep navy-black) ── */
-  --color-ink-950: #0A0918;
-  --color-ink-900: #0F0E1A;
-  --color-ink-800: #1A1830;
-  --color-ink-700: #252245;
-  --color-ink-600: #3D3A5C;
-  --color-ink-500: #5C587A;
-  --color-ink-400: #7B78A8;
-  --color-ink-300: #A8A6C8;
-  --color-ink-200: #D1D0E8;
-  --color-ink-100: #EEEDF8;
-  --color-ink-50:  #F7F6FC;
+  /* ── Deep Indigo Ink (text & structure) ── */
+  --color-ink-950: #0d0b24;
+  --color-ink-900: #1e1b4b;
+  --color-ink-800: #2e2a6e;
+  --color-ink-700: #4338ca;
+  --color-ink-600: #6366f1;
+  --color-ink-500: #818cf8;
+  --color-ink-400: #a5b4fc;
+  --color-ink-300: #c7d2fe;
+  --color-ink-200: #e0e7ff;
+  --color-ink-100: #eef2ff;
+  --color-ink-50:  #f5f7ff;
 
-  /* ── Amber (warm accent) ── */
-  --color-amber-600: #B8732D;
-  --color-amber-500: #D4883A;
-  --color-amber-400: #E09B4E;
-  --color-amber-300: #EDAE6D;
-  --color-amber-200: #F5D0A8;
-  --color-amber-100: #FBF0E2;
-  --color-amber-50:  #FEF8F0;
+  /* ── Gold accent (Islamic geometric art reference) ── */
+  --color-amber-700: #92400e;
+  --color-amber-600: #b45309;
+  --color-amber-500: #d97706;
+  --color-amber-400: #f59e0b;
+  --color-amber-300: #fbbf24;
+  --color-amber-200: #fde68a;
+  --color-amber-100: #fef3c7;
+  --color-amber-50:  #fffbeb;
 
-  /* ── Sand (warm neutral) ── */
-  --color-sand-200: #E8E2D5;
-  --color-sand-100: #F3F0EA;
-  --color-sand-50:  #FAF9F6;
+  /* ── Slate (neutral surfaces) ── */
+  --color-sand-200: #e2e5f0;
+  --color-sand-100: #eef0f8;
+  --color-sand-50:  #f8f9fc;
 
-  /* ── Semantic ── */
-  --color-sage-700: #1F5C3A;
-  --color-sage-600: #2D7A4F;
-  --color-sage-100: #DCF0E6;
-  --color-rose-600: #C0392B;
-  --color-rose-100: #FADBD8;
+  /* ── Semantic colours ── */
+  --color-sage-700: #047857;
+  --color-sage-600: #059669;
+  --color-sage-100: #d1fae5;
+  --color-rose-600: #be123c;
+  --color-rose-100: #ffe4e6;
 
   /* ── Backgrounds & surfaces ── */
   --color-background: var(--color-sand-50);
-  --color-surface:    #FFFFFF;
+  --color-surface:    #ffffff;
   --color-foreground: var(--color-ink-900);
 
   /* ── Typography ── */
@@ -75,14 +76,14 @@ body {
 
 /* ── Focus ring ── */
 :focus-visible {
-  outline: 2px solid var(--color-amber-500);
+  outline: 2px solid var(--color-ink-600);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* ── Selection ── */
 ::selection {
-  background: var(--color-amber-200);
+  background: var(--color-ink-200);
   color: var(--color-ink-900);
 }
 
@@ -95,7 +96,7 @@ body {
   background: var(--color-sand-100);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ink-300);
+  background: var(--color-ink-400);
   border-radius: 99px;
 }
 
@@ -111,4 +112,182 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* ── Light surface card ── */
+.surface-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-sand-200);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 4px rgba(30, 27, 75, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.surface-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── Hero with photographic / illustrated background ── */
+.hero-backdrop {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(248, 249, 252, 0.97) 0%,
+    rgba(238, 242, 255, 0.93) 45%,
+    rgba(238, 242, 255, 0.55) 70%,
+    rgba(30, 27, 75, 0.15) 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Subtle Islamic geometric pattern (SVG inline) ── */
+.pattern-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.04'%3E%3Cpath d='M32 4 L60 20 L60 44 L32 60 L4 44 L4 20 Z'/%3E%3Cpath d='M32 14 L50 24 L50 40 L32 50 L14 40 L14 24 Z' fill='none' stroke='%236366f1' stroke-opacity='0.04' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── Animations ── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%;   }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;   }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.35); }
+  50%       { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);  }
+}
+
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position: 400px 0;  }
+}
+
+/* ── Scroll-reveal utility ── */
+.reveal {
+  animation: slideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.2s; }
+.reveal-delay-3 { animation-delay: 0.3s; }
+
+/* ── Gold animated border on CTAs ── */
+.btn-gold-glow {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e2a6e 50%, #1e1b4b 100%);
+  background-size: 200% 200%;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.btn-gold-glow:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 4px 16px rgba(30, 27, 75, 0.3);
+  animation: gradientShift 2s ease infinite;
+}
+
+/* ── Indigo glow on icon badges ── */
+.icon-badge-indigo {
+  background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(99,102,241,0.06));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 14px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.icon-badge-indigo:hover,
+.surface-card:hover .icon-badge-indigo {
+  background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(99,102,241,0.1));
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
+}
+
+/* ── Gold pulse on notification dots ── */
+.dot-gold-pulse {
+  animation: pulseGold 2s ease-in-out infinite;
+}
+
+/* ── Card 3D lift on hover ── */
+.card-lift {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(30, 27, 75, 0.12), 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+/* ── Stat number gold gradient ── */
+.stat-gold {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gold underline link ── */
+.link-gold {
+  color: #d97706;
+  text-decoration: none;
+  position: relative;
+}
+.link-gold::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #f59e0b;
+  transition: width 0.25s ease;
+}
+.link-gold:hover::after { width: 100%; }
+
+/* ── Aliases & extra utilities from design spec ── */
+.card-hover-lift {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(30, 27, 75, 0.12);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.animated-border {
+  position: relative;
+  background: linear-gradient(135deg, #1e1b4b, #2e2a6e, #1e1b4b);
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.stat-animate {
+  animation: countUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Nav scroll shadow */
+.nav-scrolled {
+  box-shadow: 0 4px 24px rgba(30, 27, 75, 0.08);
+  border-color: var(--color-sand-200);
 }

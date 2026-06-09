@@ -4,7 +4,7 @@ import { DashboardTopBar } from "@/components/dashboard/sidebar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail } from "lucide-react";
 
-export const metadata: Metadata = { title: "FAQ" };
+export const metadata: Metadata = { title: "FAQ — IFinCert" };
 
 const faqs = [
   { q: "How do I set up my savings plan?", a: "Go to Savings in the sidebar. Your CSAA plan is pre-configured with a ₦2,000,000 goal. Click 'Add to savings', choose your transfer method (bank or wallet), and confirm. Your progress updates immediately." },
@@ -15,8 +15,8 @@ const faqs = [
   { q: "How long does it take for my transfer to be confirmed?", a: "Bank transfers are typically confirmed within 1–2 business days. Wallet transfers are usually instant. Once confirmed, your dashboard balance updates." },
   { q: "Can I pay for training from my savings?", a: "Yes. On the Pay for Training page, select the training programmes you want and choose 'Pay from Savings' before confirming. The amount will be deducted from your savings balance." },
   { q: "How do I apply for a job at a partner institution?", a: "Go to Job Placement. Each listing has an 'Apply' button linking to the institution's external application portal. Ensure your profile and certifications are up to date before applying." },
-  { q: "Is my personal data secure?", a: "Yes. MIFEA handles your data in accordance with the Nigeria Data Protection Regulation (NDPR). View our full Privacy Policy in the footer or by visiting /legal/privacy." },
-  { q: "How do I contact the MIFEA team?", a: "Email numerouno081@gmail.com or call +2348126844811. Our office is at Taiwo Isale, Unity Rd, Ilorin, Kwara State, Nigeria. You can also use the Support page on your dashboard." },
+  { q: "Is my personal data secure?", a: "Yes. IFinCert handles your data in accordance with the Nigeria Data Protection Regulation (NDPR). View our full Privacy Policy in the footer or by visiting /legal/privacy." },
+  { q: "How do I contact the IFinCert team?", a: "Email numerouno081@gmail.com or call +2348126844811. Our office is at Taiwo Isale, Unity Rd, Ilorin, Kwara State, Nigeria. You can also use the Support page on your dashboard." },
 ];
 
 export default function DashboardFAQPage() {
@@ -26,8 +26,8 @@ export default function DashboardFAQPage() {
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
         <div className="max-w-3xl mx-auto">
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-ink-900">Frequently asked questions</h2>
-            <p className="text-sm text-ink-500 mt-1">Quick answers about using your MIFEA account.</p>
+            <h2 className="text-xl font-semibold" style={{ color: "#e2e8f0" }}>Frequently asked questions</h2>
+            <p className="text-sm mt-1" style={{ color: "#64748b" }}>Quick answers about using your IFinCert account.</p>
           </div>
 
           <Card>
@@ -43,11 +43,26 @@ export default function DashboardFAQPage() {
             </CardContent>
           </Card>
 
-          <div className="mt-6 bg-amber-50 border border-amber-100 rounded-2xl p-6 text-center">
-            <Mail className="h-6 w-6 text-amber-500 mx-auto mb-3" />
-            <p className="text-sm font-semibold text-ink-900 mb-1">Still have questions?</p>
-            <p className="text-sm text-ink-500 mb-3">Our team is ready to help.</p>
-            <a href="mailto:numerouno081@gmail.com" className="text-sm text-amber-500 font-medium hover:underline">
+          <div
+            className="mt-6 rounded-2xl p-6 text-center"
+            style={{
+              background: "rgba(16,185,129,0.06)",
+              border: "1px solid rgba(16,185,129,0.15)",
+            }}
+          >
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3"
+              style={{ background: "rgba(16,185,129,0.12)", border: "1px solid rgba(16,185,129,0.2)" }}
+            >
+              <Mail className="h-5 w-5" style={{ color: "#10b981" }} />
+            </div>
+            <p className="text-sm font-semibold mb-1" style={{ color: "#e2e8f0" }}>Still have questions?</p>
+            <p className="text-sm mb-3" style={{ color: "#64748b" }}>Our team is ready to help.</p>
+            <a
+              href="mailto:numerouno081@gmail.com"
+              className="text-sm font-medium transition-opacity hover:opacity-80"
+              style={{ color: "#10b981" }}
+            >
               numerouno081@gmail.com
             </a>
           </div>

@@ -40,8 +40,8 @@ export default function RegisterPage() {
               className={cn(
                 "w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-colors",
                 step === s || (s === "role" && step === "details")
-                  ? "bg-amber-500 text-white"
-                  : "bg-sand-200 text-ink-400"
+                  ? "bg-amber-500 text-white font-bold"
+                  : "bg-sand-100 text-ink-500"
               )}
             >
               {i + 1}
@@ -53,10 +53,10 @@ export default function RegisterPage() {
 
       {step === "role" ? (
         <>
-          <h1 className="font-display text-3xl font-bold text-ink-900 mb-2">
+          <h1 className="font-display text-3xl font-bold text-ink-950 mb-2">
             Create your account
           </h1>
-          <p className="text-ink-500 mb-8">
+          <p className="text-ink-600 mb-8">
             Choose your registration type to get started.
           </p>
 
@@ -77,9 +77,9 @@ export default function RegisterPage() {
             />
           </div>
 
-          <p className="text-center text-sm text-ink-500 mt-8">
+          <p className="text-center text-sm text-ink-600 mt-8">
             Already have an account?{" "}
-            <Link href="/login" className="text-amber-500 font-medium hover:underline">
+            <Link href="/login" className="text-amber-600 font-medium hover:text-amber-700 hover:underline transition-colors">
               Sign in
             </Link>
           </p>
@@ -88,16 +88,16 @@ export default function RegisterPage() {
         <>
           <button
             onClick={() => setStep("role")}
-            className="text-sm text-ink-400 hover:text-ink-700 transition-colors mb-6 flex items-center gap-1"
+            className="text-sm text-ink-600 hover:text-ink-950 transition-colors mb-6 flex items-center gap-1"
           >
             ← Back
           </button>
-          <h1 className="font-display text-3xl font-bold text-ink-900 mb-1">
+          <h1 className="font-display text-3xl font-bold text-ink-950 mb-1">
             Your details
           </h1>
-          <p className="text-ink-500 mb-8">
+          <p className="text-ink-600 mb-8">
             Registering as{" "}
-            <span className="text-amber-500 font-medium capitalize">{role}</span>
+            <span className="text-amber-600 font-semibold capitalize">{role}</span>
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -131,7 +131,7 @@ export default function RegisterPage() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="text-ink-400 hover:text-ink-700 transition-colors"
+                    className="text-ink-500 hover:text-ink-900 transition-colors"
                     aria-label={showPassword ? "Hide password" : "Show password"}
                   >
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -141,21 +141,21 @@ export default function RegisterPage() {
             </div>
 
             <div className="pt-2">
-              <p className="text-xs text-ink-400 mb-4">
+              <p className="text-xs text-ink-450 mb-4 leading-relaxed">
                 By creating an account, you agree to our{" "}
-                <Link href="/legal/terms" className="text-amber-500 hover:underline">Terms & Conditions</Link>
+                <Link href="/legal/terms" className="text-amber-600 hover:text-amber-700 transition-colors hover:underline">Terms & Conditions</Link>
                 {" "}and{" "}
-                <Link href="/legal/privacy" className="text-amber-500 hover:underline">Privacy Policy</Link>.
+                <Link href="/legal/privacy" className="text-amber-600 hover:text-amber-700 transition-colors hover:underline">Privacy Policy</Link>.
               </p>
               <Button type="submit" variant="primary" size="lg" className="w-full" loading={loading}>
-                Create account <ArrowRight className="h-5 w-5" />
+                Create account <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </form>
 
-          <p className="text-center text-sm text-ink-500 mt-6">
+          <p className="text-center text-sm text-ink-600 mt-6">
             Already have an account?{" "}
-            <Link href="/login" className="text-amber-500 font-medium hover:underline">
+            <Link href="/login" className="text-amber-600 font-medium hover:text-amber-700 hover:underline transition-colors">
               Sign in
             </Link>
           </p>
@@ -190,17 +190,19 @@ function RoleCard({
     >
       <div
         className={cn(
-          "w-10 h-10 rounded-xl flex items-center justify-center transition-colors",
-          selected ? "bg-amber-500 text-white" : "bg-sand-100 text-ink-500"
+          "w-10 h-10 rounded-xl flex items-center justify-center transition-colors border",
+          selected
+            ? "bg-amber-500 text-white border-amber-500"
+            : "bg-sand-100 text-ink-600 border-sand-200"
         )}
       >
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <p className={cn("font-semibold text-sm", selected ? "text-amber-600" : "text-ink-900")}>
+        <p className={cn("font-semibold text-sm", selected ? "text-amber-700" : "text-ink-950")}>
           {title}
         </p>
-        <p className="text-xs text-ink-400 mt-0.5 leading-snug">{description}</p>
+        <p className="text-xs text-ink-400 mt-1 leading-snug">{description}</p>
       </div>
     </button>
   );

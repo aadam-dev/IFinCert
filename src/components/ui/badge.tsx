@@ -7,12 +7,13 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default:  "bg-ink-100 text-ink-700",
-        amber:    "bg-amber-100 text-amber-600",
-        sage:     "bg-sage-100 text-sage-700",
+        default:  "bg-sand-100 text-ink-700",
+        indigo:   "bg-ink-100 text-ink-600 border border-ink-200",
+        amber:    "bg-amber-100 text-amber-700 border border-amber-200",
+        sage:     "bg-sage-100 text-sage-600",
         rose:     "bg-rose-100 text-rose-600",
-        ink:      "bg-ink-800 text-white",
-        outline:  "border border-ink-200 text-ink-600 bg-transparent",
+        ink:      "bg-ink-900 text-white",
+        outline:  "border border-sand-200 text-ink-600 bg-transparent",
       },
       size: {
         sm: "px-2 py-0.5 text-xs",

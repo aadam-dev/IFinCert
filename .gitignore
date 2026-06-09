@@ -28,16 +28,35 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+# environment & secrets
 .env
-.env*.local
+.env.*
+!.env.example
+*.local
 
-# vercel
+# credentials & keys
+credentials.json
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+*.secret
+
+# vercel / deployment
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# source material / proposal docs (internal reference only)
+# IDE & agent tooling
+.claude/
+.cursor/
+.idea/
+.vscode/
+
+# internal documentation (not for public repo)
 /docs/
+AGENTS.md
+CLAUDE.md
